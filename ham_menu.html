@@ -17,6 +17,18 @@
             right:0;
             overflow: hidden;
             transition: 1s;
+        }
+        .cross{
+            font-size: 45px;
+            color: red;
+            cursor: pointer;
+        }
+        .ham-icon{
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            font-size: 40px;
+            cursor: pointer;
 
         }
     </style>
@@ -26,10 +38,15 @@
         &equiv;
     </span>
     <div class="ham-menu" id="ham-menu">
-        <span class="cross" onclick="closeNav">&times;</span>
+        <span class="cross" onclick="closeNav()">&times;</span>
     </div>
     <script>
-
+        function openNav(){
+            document.getElementById("ham-menu").style.width="20vw";
+        }
+        function closeNav(){
+            document.getElementById("ham-menu").style.width = "0";
+        }
     </script>
 </body>
 </html>
