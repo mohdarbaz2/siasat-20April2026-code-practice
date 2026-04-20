@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hamburger Menu Toggle</title>
+
+<style>
+*{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Hamburger icon */
+.ham-icon{
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Side menu */
+.ham-menu{
+    width:0;
+    height:100vh;
+    background-color:#111;
+    position: fixed;
+    top:0;
+    right:0;
+    overflow-x:hidden;
+    transition:0.5s;
+    padding-top:60px;
+}
+
+/* Menu links */
+.ham-menu a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    font-size:28px;
+    padding:15px 25px;
+    transition:0.3s;
+}
+
+.ham-menu a:hover{
+    background:#575757;
+}
+
+/* Close button */
+.cross{
+    position:absolute;
+    top:15px;
+    left:20px;
+    font-size:45px;
+    color:red;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<span class="ham-icon" onclick="openNav()">&#9776;</span>
+
+<div class="ham-menu" id="ham-menu">
+    <span class="cross" onclick="closeNav()">&times;</span>
+
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</div>
+
+<script>
+function openNav(){
+    document.getElementById("ham-menu").style.width = "250px";
+}
+
+function closeNav(){
+    document.getElementById("ham-menu").style.width = "0";
+}
+</script>
+
+</body>
+</html>
