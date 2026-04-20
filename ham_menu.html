@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ham menu bar toggle</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .ham-menu{
+            width: 0;
+            height:100vh;
+            background-color: black;
+            position: absolute;
+            top:0;
+            right:0;
+            overflow: hidden;
+            transition: 1s;
+
+        }
+    </style>
+</head>
+<body>
+    <span class="ham-icon" onclick="openNav()">
+        &equiv;
+    </span>
+    <div class="ham-menu" id="ham-menu">
+        <span class="cross" onclick="closeNav">&times;</span>
+    </div>
+    <script>
+
+    </script>
+</body>
+</html>
