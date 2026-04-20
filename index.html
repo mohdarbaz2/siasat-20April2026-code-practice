@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation program</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #064588;
+        }
+        .container{
+            border-style: solid;
+            border-radius: 30px;
+            width: 50vw;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: teal;
+        }
+        .panel{
+            /* border: 2px solid white; */
+            width:fit-content;
+            height: fit-content;
+        }
+        span{
+            font-size: 30px;
+            color: white;
+        }
+        input[type="text"],input[type="password"]{
+            width:25vw;
+            height: 40px;
+            border-radius: 30px;
+            font-size: 25px;
+            padding-left: 20px;
+            color:seagreen;
+        }
+        input[type="submit"],input[type="reset"]{
+            width: 12vw;
+            height: 35px;
+            font-size: 20px;
+            border-radius: 20px;
+            margin-top: 10px;
+            color: teal;
+            transition: 1s;
+        }
+        input[type="reset"]{
+            margin-left: 1vw;
+        }
+        input[type="submit"]:hover,input[type="reset"]:hover{
+            background-color: #064588;
+            color: white;
+        }
+        .eye{
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="panel">
+            <form action="">
+                <span> Username:</span> <br>
+                <input type="text"> <br>
+                <span> Password:</span> <br>
+                <input type="password" name="" id="pwd">
+                <i class="fa fa-eye-slash eye" id="eye" onclick="showHide()"></i>
+                <br>
+                <input type="submit" name="" id="">
+                <input type="reset">
+            </form>
+        </div>
+    </div>
+    <script>
+        function showHide(){
+            isEyeClosed = document.getElementById("eye").classList.contains("fa-eye-slash");
+            if(isEyeClosed==true){
+                document.getElementById("eye").classList.remove("fa-eye-slash")
+                document.getElementById("eye").classList.add("fa-eye")
+                document.getElementById("pwd").setAttribute("type","text")
+            }
+            else{
+                document.getElementById("eye").classList.add("fa-eye-slash")
+                document.getElementById("eye").classList.remove("fa-eye")
+                document.getElementById("pwd").setAttribute("type","password");
+            }
+        }
+    </script>
+</body>
+</html>
